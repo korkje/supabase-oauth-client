@@ -1,5 +1,7 @@
 # supabase-oauth-client
 
+[![npm](https://img.shields.io/npm/v/supabase-oauth-client)](https://www.npmjs.com/package/supabase-oauth-client)
+
 Zero-dependency OAuth 2.1 **client** for [Supabase Auth's OAuth server](https://supabase.com/docs/guides/auth/oauth-server/oauth-flows): authorization code + PKCE, token refresh, and a session you can hand straight to `supabase-js`.
 
 **Direction matters.** This package is for when *a Supabase project is the identity provider* and an application wants tokens issued by it: "Sign in with <your product>" in another app, a CLI, a device, a server acting for a user. If you want to sign users *into* Supabase with Google or GitHub, you do not need this; use `supabase.auth.signInWithOAuth()` in supabase-js.
