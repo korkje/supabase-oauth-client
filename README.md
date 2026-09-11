@@ -293,7 +293,7 @@ npm run build
 
 `scripts/live-test.mjs` runs the real flow against a project (needs `SUPABASE_URL`, `SUPABASE_ANON_KEY`, `OAUTH_CLIENT_ID`; a public OAuth client with redirect URI `http://localhost:5173/oauth/callback`, Site URL `http://localhost:3000` and authorization path `/oauth/consent`). It serves a throwaway consent page locally, prints an authorize URL to open, then exercises exchange, code reuse, refresh, refresh-token reuse and revocation, and prints its findings.
 
-Releases are cut from GitHub: bump `version` in `package.json`, commit, then create a GitHub release whose tag is `v<version>`. The `Publish` workflow runs on the tag, checks that the tag matches `package.json`, runs the tests, and publishes to npm via trusted publishing (OIDC), so no npm token is stored in the repo.
+Releases are cut from GitHub only. `package.json` stays at `0.0.0` in git; the version comes from the release tag (`v0.2.0` → `0.2.0`). A release marked as a pre-release publishes to the `next` dist-tag, otherwise to `latest`. Publishing uses npm trusted publishing (OIDC), so no token lives in the repo.
 
 ## License
 
