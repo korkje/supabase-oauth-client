@@ -1,0 +1,57 @@
+{
+  "name": "supabase-oauth-client",
+  "version": "0.1.0",
+  "description": "Zero-dependency OAuth 2.1 client (authorization code + PKCE) for Supabase Auth's OAuth server, for same-device redirects or codes delivered out of band",
+  "keywords": [
+    "supabase",
+    "oauth",
+    "oauth2",
+    "oauth2.1",
+    "pkce",
+    "authorization-code",
+    "auth"
+  ],
+  "license": "MIT",
+  "author": "Ola Næss Kaldestad <mail@okal.no>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/korkje/supabase-oauth-client.git"
+  },
+  "homepage": "https://github.com/korkje/supabase-oauth-client#readme",
+  "bugs": {
+    "url": "https://github.com/korkje/supabase-oauth-client/issues"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=22"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "rm -rf dist && tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^24.13.4",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.0"
+  }
+}
