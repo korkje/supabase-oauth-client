@@ -1,6 +1,6 @@
 {
   "name": "supabase-oauth-client",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Zero-dependency OAuth 2.1 client (authorization code + PKCE) for Supabase Auth's OAuth server, for same-device redirects or codes delivered out of band",
   "keywords": [
     "supabase",
